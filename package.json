@@ -7,6 +7,10 @@
     "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'public/js/app/**/*.js' 'public/js/app/**/*.js.map' '!public/js/app/bundle.js' '!public/js/app/*.chunk.js' 'app_client/**/*.ngfactory.ts' 'app_client/**/*.shim.ts'"
   },
+  "engines":{
+    "node":"~6.9.1",
+    "npm":"~3.10.8"
+  },
   "dependencies": {
     "@angular/common": "2.0.1",
     "@angular/compiler": "2.0.1",
