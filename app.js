@@ -10,7 +10,7 @@ var index = require('./app_server/routes/index');
 var userRoute = require('./app_server/routes/user');
 
 var app = express();
-mongoose.connect('localhost: 27017/radioFriends');
+mongoose.connect('mongodb://radu-miron:malibu@ds157809.mlab.com:57809/radio-friends');
 
 // view engine setup
 app.set('views', path.join(__dirname,'app_server', 'views'));
