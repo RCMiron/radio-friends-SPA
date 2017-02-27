@@ -15,7 +15,7 @@ export class AuthService{
     const requestHeaders = new Headers({"Content-Type":"application/json"});
 
     return this.http
-      .post('http://localhost:8000/user/register', requestBody, {headers: requestHeaders})
+      .post('https://radio-friends.herokuapp.com/user/register', requestBody, {headers: requestHeaders})
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
   }
@@ -24,7 +24,7 @@ export class AuthService{
     const requestHeaders = new Headers({'Content-Type': 'application/json'});
 
     return this.http
-      .post('http://localhost:8000/user/signin', requestBody, {headers: requestHeaders})
+      .post('https://radio-friends.herokuapp.com/user/signin', requestBody, {headers: requestHeaders})
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
   }
