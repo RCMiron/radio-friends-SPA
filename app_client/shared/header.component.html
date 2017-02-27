@@ -1,0 +1,26 @@
+<nav class='navbar navbar-static-top'>
+  <div class="logoContainer">
+    <a [routerLink]="['/']">
+      <svg viewbox='0 0 459.35 115.8'>
+        <use xlink:href='#logo' />
+      </svg>
+    </a>
+  </div>
+  <button *ngIf='isLoggedIn()' id='toggleDown' type="button" class='navbar-toggle' data-toggle='collapse' data-target='.navHeaderCollapse'>
+    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+  </button>
+  <div class="collapse navbar-collapse navHeaderCollapse">
+    <ul class='nav navbar-nav'*ngIf='isLoggedIn()'>
+      <a [routerLink]="[username, 'listen', 'my-station']">
+        <li data-toggle='collapse' data-target='.navHeaderCollapse'>
+        My Station
+        </li>
+      </a>
+
+        <li data-toggle='collapse' data-target='.navHeaderCollapse'>My Followers</li>
+        <li data-toggle='collapse' data-target='.navHeaderCollapse'>My Followed Stations</li>
+        <li data-toggle='collapse' data-target='.navHeaderCollapse'>Profile Settings</li>
+        <li data-toggle='collapse' data-target='.navHeaderCollapse'(click)='onLogout()'>Logout</li>
+    </ul>
+  </div>
+</nav>

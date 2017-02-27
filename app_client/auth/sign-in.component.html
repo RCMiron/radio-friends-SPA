@@ -1,0 +1,26 @@
+
+<form [formGroup]='signInForm' (ngSubmit)='onSubmit()' class="form-group">
+  <fieldset>
+    <legend>Already have an account?</legend>
+
+    <label for="username" class="sr-only">username</label>
+    <input
+      type="text"
+      formControlName="username"
+      id="signInUsername"
+      placeholder="Username"
+      class="form-control"/>
+
+    <label for="password" class="sr-only">password</label>
+    <input
+      type="password"
+      formControlName="password"
+      id="signInPassword"
+      placeholder="Password"
+      class="form-control"/>
+
+    <label for="signIn" class="sr-only">sign up</label>
+    <input
+      type="submit" value="Sign In" id="signIn" class="form-control" [disabled] = '!signInForm.valid'/>
+  </fieldset>
+</form>

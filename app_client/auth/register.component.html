@@ -1,0 +1,56 @@
+<form [formGroup]='registerForm' (ngSubmit)='onSubmit()' class="form-group">
+  <fieldset>
+    <legend>Sign up and start broadcasting to your friends</legend>
+
+    <label for="firstName" class="sr-only">first name</label>
+    <input
+      type="text"
+      formControlName="firstName"
+      placeholder="First Name"
+      id="firstName"
+      class="form-control"/>
+
+    <label for="lastName" class="sr-only">last name</label>
+    <input
+      type="text"
+      formControlName="lastName"
+      id="lastName"
+      placeholder="Last Name"
+      class="form-control"/>
+
+    <label for="username" class="sr-only">username</label>
+    <input
+      type="text"
+      formControlName="username"
+      id="username"
+      placeholder="Username"
+      class="form-control"/>
+
+    <label for="email" class="sr-only">email</label>
+    <input
+      type="email"
+      formControlName="email"
+      id="email" placeholder="Email"
+      class="form-control"/>
+
+    <label for="password" class="sr-only">password</label>
+    <input
+      type="password"
+      formControlName="password"
+      id="password"
+      placeholder="Password"
+      class="form-control"/>
+
+    <label for="repeatPassword" class="sr-only">password</label>
+    <input
+      type="password"
+      formControlName="repeatPassword"
+      id="repeatPassword"
+      placeholder="Repeat Password"
+      class="form-control"/>
+
+    <label for="signUp" class="sr-only">sign up</label>
+    <input
+      type="submit" value="Sign Up" id="signUp" class="form-control" [disabled] = '!registerForm.valid'/>
+  </fieldset>
+</form>

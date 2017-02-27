@@ -1,0 +1,28 @@
+main{
+padding: 20px;
+}
+form fieldset{
+  padding: 0 30px;
+}
+fieldset legend{
+  color: #483F5A;
+  font-family:'Open Sans', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 1px;
+}
+fieldset input{
+  margin-bottom: 5px;
+}
+input[type=text]{
+    color: #483F5A;
+}
+input[type=submit]{
+    background-color: #D0C7DE;
+    color:#483F5A;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+input.ng-invalid,input.ng-invalid.ng-touched::-webkit-input-placeholder{
+  color: #cc0000;
+}

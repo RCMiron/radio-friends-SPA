@@ -1,0 +1,28 @@
+<div class="roundButtonContainer">
+    <svg class='roundButtonGroup'>
+      <use xlink:href='#roundButtonGroup' />
+    </svg>
+    <svg class='roundButtonOne icon'
+         (click)='onRoundButtonOne()'
+         [ngClass]="{'recording': recording}"
+         >
+      <use #roundButtonOne xlink:href='#mic' data-state='ready'/>
+    </svg>
+    <svg class='roundButtonTwo icon' (click)='onRoundButtonTwo()'>
+      <use #roundButtonTwo xlink:href='#live' data-state='ready'/>
+    </svg>
+    <svg class='roundButtonThree icon' (click)='onRoundButtonThree()'>
+      <use #roundButtonThree xlink:href='#upload' data-state='ready' />
+    </svg>
+</div>
+
+<app-countdown *ngIf='recording' [countdown]='countdown'></app-countdown>
+
+<div class="post">
+  <form id="post-title">
+    <label for="post-title">Csipogo, {{dateNow | date:'medium'}}</label>
+    <input type="text" name="post-title" placeholder="your post title here">
+  </form>
+  <br>
+  <input type="range" id="seek" value="0" />
+</div>

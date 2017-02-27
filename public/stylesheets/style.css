@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@font-face {
+	font-family: 'DSDIGI';
+	src: url('./fonts/DSDIGI.eot');
+	src: local('DSDIGI'), url('./fonts/DSDIGI.woff') format('woff'), url('./fonts/DSDIGI.ttf') format('truetype');
+}
+body, html{
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #483F5A;
+}
+main{
+  background-color: #EAE5F1;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  padding:20px;
+}
+.desktop-only{
+  position: fixed;
+  width: 100vw;
+  height: 110vh;
+  background-color: #483F5A;
+}
+.app-container{
+  position: relative;
+  float: right;
+  background-color: #EAE5F1;
+  min-height: 100vh;
+  width: 370px;
+  overflow: hidden;
+}
+.initialLogo{
+  position: relative;
+  width: 70%;
+  margin: 30vh auto;
+}
+.buttons{
+  fill: #483F5A;
+}
+p{
+  margin-top: -10px;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+  color: #483F5A;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+form fieldset{
+  padding: 0 30px;
+}
+fieldset legend{
+  color: #483F5A;
+  font-family:'Open Sans', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 1px;
+}
+fieldset input{
+  margin-bottom: 5px;
+}
+input[type=text]{
+    color: #483F5A;
+}
+input[type=submit]{
+    background-color: #D0C7DE;
+    color:#483F5A;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.logoContainer{
+  width: 250px;
+  margin: 0 auto;
+}
+.buttons{
+  fill: #483F5A;
+}
+.countdown{
+  font-family: 'DSDIGI';
+}
+
+@media screen and (max-width: 768px){
+  .app-container{
+    width: 100%;
+    margin:0;
+    left:0;
+  }
+  .desktop-only{
+    display: none;
+  }
+}
